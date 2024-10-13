@@ -5,7 +5,7 @@ from modules import filter_fastq_modules
 def run_dna_rna_tools(*args):
    pass
 
-def filter_fastq(fastq_file:dict[str, tuple[str,str]], gc_bounds:tuple=(0, 100), length_bounds:int=(0, 2 ** 32), quality_threshold: int=0 ):
+def filter_fastq(seq :dict[str, tuple[str,str]], gc_bounds:tuple=(0, 100), length_bounds:int=(0, 2 ** 32), quality_threshold: int=0 ):
     """
     Функция проверяет, что подаваемый словарь, состоящий из fastq-сиквенсов  соответствует условиям:
      1)находится в указанном диапазоне GC состава( если не указано, то все риды сохраняем)
@@ -19,7 +19,7 @@ def filter_fastq(fastq_file:dict[str, tuple[str,str]], gc_bounds:tuple=(0, 100),
     :return:dict
     """
     filtered_fastq = {}
-    for seq_name, seq_data in fastq_file.items():
+    for seq_name, seq_data in seq.items():
         seq, quality = seq_data
 
         gc_content = filter_fastq_modules.calculate_gc_bounds(seq) * 100

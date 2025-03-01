@@ -1,4 +1,4 @@
-# Utils_for_Nautilus
+# Utils for Nautilus
  **Utils_for_Nautilus** -are packages for processing and filtering FASTQ files
  
  **Authors:**

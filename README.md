@@ -1,41 +1,110 @@
 # Utils_for_Nautilus
- **Utils_for_Nautilus** - это пакеты для обработки и фильтрации FASTQ  файлов
+ **Utils_for_Nautilus** -are packages for processing and filtering FASTQ files
  
- **Авторы:**
+ **Authors:**
  
- * **Разработка** : Кравченко Мария Антоновна( https://github.com/MariiaKaar)
- * **Руководитель, идея**: Институт биоинформатики( https://bioinf.me/en),
+ * **Development** : Kravchenko Maria Antonovna( https://github.com/MariiaKaar)
+ * **Leader, Idea**: Institute of Bioinformatics( https://bioinf.me/en),
     
-   Санкт- Петербург, Россия
+   St. Petersburg, Russia
 ## Content
-* [Установка](#Установкf)
-* [Инструкция по использованию](#Инструкция-по-использованию)
-* [Контакты](#Контакты)
-* [Функции](#Функции)
- ## Установка
+* [Installation](#Installation)
+* [Instructions_for_Use](#Instructions_for_Use)
+* [Classes](#Classes)
+* [Functions](#Functions)
+* [Contacts](#Contacts)
 
-Для запуска Utils_for_Nautilus скачайте папку себе на компьютер или склонируйте репозиторий.
+## 
+ ## Installation
+
+To run Utils_for_Nautilus, download the folder to your computer or clone the repository.
 
 ```bash
 git clone git@github.com:MariiaKaar/Utils_for_Nautilus.git
 ```
-## Инструкция по использованию
+## Instructions for use
 
-Для работы с пакетом вы должны импортировать основной скрипт
-и вызвать любую из функций
-## Функции
+To work with the package you must import the main script
 
-Программа содержит две главные функции и дополнительные модули к ним.
-1. **run_dna_rna_tools** ( ф-я будет обязательно будет реализована в будущем )
-   
+## Classes
 
-2. **filter_fastq** принимает словарь с ридами,  показателями качества
-   прочтения и считает для них
-   - процентный GC-состав рида.
-   - пороговое значение качества рида.
-   - длину рида
+1. **BiologicalSequence** (Abstract Base Class)
+
+   Provides a common interface for biological sequences  
+
+   Key Methods:
+
+  `__len__`: Returns the length of the sequence.
+
+   `__repr__`: Returns a string representation of the sequence.
+
+   check_alphabet: Validates if the sequence uses a valid alphabet.
+
+   `__getitem__`: Allows indexing into the sequence.
+
+   `__str__`: Returns the sequence as a string.
+
+2. **NucleicAcidSequence**
+
+   Key Methods:
+
+   complement: Returns the complementary sequence.
+
+   reverse: Returns the reversed sequence.
+
+   reverse_complement: Returns the reverse complement of the sequence.
+
+   check_alphabet: Validates if the sequence contains valid nucleic acid bases (A, T, G, C, U).
+
+3. **DNASequence**
+
+      Represents a DNA sequence.
+
+      Key Methods:
+
+      transcribe: Transcribes DNA to RNA
+4. **RNASequence**
+
+      Represents an RNA sequence
+
+      Key Methods:
+
+      Inherits all methods from NucleicAcidSequence
+
+5. **AminoAcidSequence**
+
+      Key Methods:
+
+      check_alphabet: Validates if the sequence contains valid amino acid 
+      
+      symbols.
+
+      calculate_molecular_weight: Estimates the molecular weight of the
+      
+      sequence.
+
+## Functions
 
 
-## Контакты
+1. **filter_fastq** 
 
-  Моя почта (mariakr55@mial.ru)
+   Filters reads from a FASTQ file based on GC content, read length, and 
+
+   average quality score.
+
+   Inputs:
+
+   input_file: Path to the input FASTQ file.
+
+   output_file: Path to save the filtered FASTQ file.
+
+   gc_bounds: Tuple or int for GC content bounds (in percentage).
+
+   length_bounds: Tuple or int for read length bounds.
+
+   quality_threshold: Minimum average quality score.
+
+
+## Contacts
+
+  My e-mail (mariakr55@mial.ru)

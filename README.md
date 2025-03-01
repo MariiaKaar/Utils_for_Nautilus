@@ -107,4 +107,4 @@ To work with the package you must import the main script
 
 ## Contacts
 
-  My e-mail (mariakr55@mial.ru)
+  My e-mail (mariakr55@mial.ru )

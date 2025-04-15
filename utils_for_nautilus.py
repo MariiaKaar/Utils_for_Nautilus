@@ -107,7 +107,7 @@ class RNASequence(NucleicAcidSequence):
         "g": "c",
         "c": "g",
     }
-        super().__init__(seq,rna_complement_dict)
+        super().__init__(seq, rna_complement_dict)
 
 
 class AminoAcidSequence(BiologicalSequence):

@@ -74,7 +74,7 @@ class DNASequence(NucleicAcidSequence):
 
     Provides methods specific to DNA sequences, including transcription.
     """
-    def __init__(self,seq):
+    def __init__(self, seq):
         dna_complement_dict = {
         "A": "T",
         "T": "A",

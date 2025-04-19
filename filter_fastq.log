@@ -1,0 +1,9 @@
+2025-04-19 18:52:33,387 - INFO - Start filtering: example_fastq.fastq -> output.fastq
+2025-04-19 18:52:33,387 - INFO - GC bounds: (40, 60), Length bounds: (50, 150), Quality threshold: 30.0
+2025-04-19 18:52:33,454 - INFO - Filtering end. Write 22 reads in output.fastq
+2025-04-19 19:03:49,508 - INFO - Start filtering: example_fastq.fastq -> output.fastq
+2025-04-19 19:03:49,509 - INFO - GC bounds: (30, 70), Length bounds: (50, 150), Quality threshold: 20.0
+2025-04-19 19:03:49,551 - INFO - Filtering end. Write 34 reads in output.fastq
+2025-04-19 19:04:11,027 - INFO - Start filtering: example_fastq.fastq -> output.fastq
+2025-04-19 19:04:11,028 - INFO - GC bounds: (30, 70), Length bounds: (50, 150), Quality threshold: 20.0
+2025-04-19 19:04:11,069 - INFO - Filtering end. Write 34 reads in output.fastq
